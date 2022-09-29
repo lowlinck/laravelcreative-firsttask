@@ -11,7 +11,30 @@
                     <p>Главная</p>
                 </a>
             </li>
-
+            <li class="nav-item">
+                <a href="{{route('admin.fertilizers.index')}}" class="nav-link">
+                    <i class="fa-solid fa-filter"></i>
+                    <p>Удобрения</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{route('admin.cultures.index')}}" class="nav-link">
+                    <i class="fa-solid fa-seedling"></i>
+                    <p>Группы растений</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{route('admin.clients.index')}}" class="nav-link">
+                    <i class="fa-solid fa-users "></i>
+                    <p>Клиенты</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{route('admin.user.index')}}" class="nav-link">
+                    <i class="fa-solid fa-users "></i>
+                    <p>Пользователи</p>
+                </a>
+            </li>
         </ul>
     </div>
 </aside>
