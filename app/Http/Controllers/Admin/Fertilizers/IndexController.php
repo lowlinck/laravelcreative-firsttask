@@ -10,7 +10,8 @@ class IndexController extends Controller
 {
     public function __invoke()
     {
-        $fertilizers = Fertilizer::all();
+        $fertilizers = Fertilizer::paginate(10);
+
 
         return view('admin.fertilizers.index', compact('fertilizers'));
     }

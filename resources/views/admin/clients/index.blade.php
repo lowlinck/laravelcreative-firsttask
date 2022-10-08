@@ -58,6 +58,7 @@
                                     <tbody>
                                     @foreach($clients as $client)
                                     <tr>
+                                        <td>{{$client->id}}</td>
                                         <td>{{$client->name}}</td>
                                         <td>{{$client->data}}</td>
                                         <td>{{$client->delivery_cost}}</td>

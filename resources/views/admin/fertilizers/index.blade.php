@@ -95,10 +95,13 @@
                                         </td>
 
 
+
                                     </tr>
                                     @endforeach
-                                    </tbody>
+
                                 </table>
+
+                                {{ $fertilizers->links('pagination::tailwind') }}
                             </div>
                             <!-- /.card-body -->
                         </div>

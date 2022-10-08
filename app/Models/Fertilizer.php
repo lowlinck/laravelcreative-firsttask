@@ -14,6 +14,6 @@ class Fertilizer extends Model
     protected $guarded = false;
 
     public function culture(){
-        return $this->belongsTo(Culture::class, 'culture_id','id ');
+        return $this->belongsTo(Culture::class);
     }
 }
