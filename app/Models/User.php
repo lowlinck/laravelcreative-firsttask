@@ -53,4 +53,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public function getUsersBySearch(Request $request) : Builder
+    {
+        $builder = (new UserSeach())->apply($request);
+        return $builder;
+    }
 }
