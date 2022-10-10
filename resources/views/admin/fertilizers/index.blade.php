@@ -6,7 +6,21 @@
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Search by name</label>
+                <input type="text" name="search" class="form-control" id="search"  placeholder="Enter name">
+                <input type="text" name="NitroBefor" class="form-control" id="search"  placeholder="priceFrom">
+               <input type="text" name="NitroAfter" class="form-control" id="search"  placeholder="Enter priceTo">
+                <div class="form-group">
+                    <label for="customRange1">Custom range</label>
+                    <input type="range" class="custom-range" id="customRange1">
+                </div>
+            </div>
 
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
         <!-- Content Header (Page header) -->
         <div class="content-header">
             <div class="container-fluid">
@@ -101,7 +115,7 @@
 
                                 </table>
 
-                                {{ $fertilizers->links('pagination::tailwind') }}
+
                             </div>
                             <!-- /.card-body -->
                         </div>
