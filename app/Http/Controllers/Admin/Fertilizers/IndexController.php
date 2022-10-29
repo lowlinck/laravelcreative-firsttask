@@ -11,6 +11,8 @@ class IndexController extends Controller
     public function __invoke(Request $request, Fertilizer $fertilizer)
     {
        // $fertilizers = Fertilizer::paginate(10);
+
+
         $fertilizers = $fertilizer->getUsersBySearch($request)->get();
 
 
