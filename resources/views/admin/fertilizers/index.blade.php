@@ -1,6 +1,7 @@
 @extends('admin.layouts.app')
 @section('content')
     @include('admin.include.header')
+
     @include('admin.include.asside')
     <!-- Modal -->
 

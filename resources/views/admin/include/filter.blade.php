@@ -22,8 +22,10 @@
             </div>
             <div class="modal-body">
                 <form class="form-control " >
-                        <label for="exampleInputEmail1">Параметры поиска</label>
+                        <label >Параметры поиска</label>
                         <input type="text" name="search" class="form-control text-center" id="search" placeholder="Введите имя">
+                        <input type="text" name="DescriptionSearch" class="form-control text-center" id="search" placeholder="Поиск в описании">
+                        <input type="text" name="PurposeSearch" class="form-control text-center" id="search" placeholder="Поиск в назначении">
                         <input type="text" name="NitroBefor" class="form-control text-center" placeholder="Введите min  нитратов">
                         <input type="text" name="NitroAfter" class="form-control text-center" placeholder="Введите max нитратов">
                         <input type="text" name="PhosforBefor" class="form-control text-center" placeholder="Введите min фосфора">
@@ -37,6 +39,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="{{route('admin.fertilizers.index')}}" class="btn btn-primary " role="button"> Сброс фильтра</a>
 
             </div>
         </div>
