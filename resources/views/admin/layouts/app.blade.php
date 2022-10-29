@@ -27,6 +27,7 @@
     <!-- Ion Slider -->
     <link rel="stylesheet" href="../../plugins/ion-rangeslider/css/ion.rangeSlider.min.css">
     <!-- bootstrap slider -->
+    <link rel="stylesheet" href="../../plugins/bootstrap5/css/bootstrap.css">
 
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -56,6 +57,7 @@
 <script src="{{asset('plugins/select2/js/select2.full.min.js')}}"></script>
 <!-- Ion Slider -->
 <script src="../../plugins/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+<script src="../../plugins/bootstrap5/js/bootstrap.bundle.js"></script>
 <!-- Bootstrap slider -->
 
 <script>
@@ -92,14 +94,14 @@
         })
         $('#range_2').ionRangeSlider()
 </script>
-<script>
-    const myModal = document.getElementById('Modal')
-    const myInput = document.getElementById('myInput')
+{{--<script>--}}
+{{--    const myModal = document.getElementById('Modal')--}}
+{{--    const myInput = document.getElementById('myInput')--}}
 
-    myModal.addEventListener('shown.bs.modal', () => {
-        myInput.focus()
-    })
-</script>
+{{--    myModal.addEventListener('shown.bs.modal', () => {--}}
+{{--        myInput.focus()--}}
+{{--    })--}}
+{{--</script>--}}
 
 <style>
     .custom-file-input:lang(en)~.custom-file-label::after {
