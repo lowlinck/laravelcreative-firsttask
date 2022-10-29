@@ -2,30 +2,40 @@
 @section('content')
     @include('admin.include.header')
     @include('admin.include.asside')
+    <!-- Modal -->
+<section class="content modal" id="Miodal">
 
-
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-        <form>
-            <div class="form-group">
-                <label for="exampleInputEmail1">Search by name</label>
-                <input type="text" name="search" class="form-control" id="search"  placeholder="Enter name">
-                <input type="text" name="NitroBefor" class="form-control" id="search"  placeholder="priceFrom">
-               <input type="text" name="NitroAfter" class="form-control" id="search"  placeholder="Enter priceTo">
-                <div class="form-group">
-                    <label for="customRange1">Custom range</label>
-                    <input type="range" class="custom-range" id="customRange1">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
+        </div>
+    </div>
+                @include('admin.include.filter')
 
 
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-        <!-- Content Header (Page header) -->
+</section>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">        <!-- Content Header (Page header) -->
         <div class="content-header">
             <div class="container-fluid">
                 <div class="row mb-2">
+
                     <div class="col-sm-6">
+
+
                         <h1 class="m-0">Удобрения</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
@@ -42,7 +52,9 @@
         <!-- Main content -->
         <section class="content">
             <div class="container-fluid">
-                <!-- Small boxes (Stat box) -->
+                <button type="button" class="btn btn-primary text-center" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Launch demo modal
+                </button>
                 <div class="row ">
                     <div class="col-1">
                         <a href="{{route('admin.fertilizers.create')}}" class="btn btn-block btn-primary btn-lg">Добавить</a>
@@ -53,7 +65,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">Опрерации с категориями</h3>
+                                <h3 class="card-title text-center">Опрерации с категориями</h3>
                             </div>
 
                             <div class=" card-body table-responsive ">

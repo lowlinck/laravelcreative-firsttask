@@ -24,6 +24,9 @@
     <!-- Daterange picker -->
     <link rel="stylesheet" href="{{asset('plugins/daterangepicker/daterangepicker.css')}}">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Ion Slider -->
+    <link rel="stylesheet" href="../../plugins/ion-rangeslider/css/ion.rangeSlider.min.css">
+    <!-- bootstrap slider -->
 
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -51,6 +54,9 @@
 <!-- AdminLTE App -->
 <script src="{{asset('dist/js/adminlte.js')}}"></script>
 <script src="{{asset('plugins/select2/js/select2.full.min.js')}}"></script>
+<!-- Ion Slider -->
+<script src="../../plugins/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+<!-- Bootstrap slider -->
 
 <script>
     $(document).ready(function() {
@@ -72,6 +78,27 @@
         bsCustomFileInput.init();
     });
         $('.select2').select2()
+
+        ('#range_1').ionRangeSlider({
+            min     : 0,
+            max     : 5000,
+            from    : 1000,
+            to      : 4000,
+            type    : 'double',
+            step    : 1,
+            prefix  : '$',
+            prettify: false,
+            hasGrid : true
+        })
+        $('#range_2').ionRangeSlider()
+</script>
+<script>
+    const myModal = document.getElementById('Modal')
+    const myInput = document.getElementById('myInput')
+
+    myModal.addEventListener('shown.bs.modal', () => {
+        myInput.focus()
+    })
 </script>
 
 <style>
