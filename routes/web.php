@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', \App\Http\Controllers\Main\IndexController::class)->name('main.index');
-    Route::group([ 'prefix' => 'admin', 'middlewarte' => ['auth','admin', 'verified']], function () {
+    Route::group([ 'prefix' => 'admin', 'middleware' => ['auth', 'verified']], function () {
         Route::get('/', \App\Http\Controllers\Admin\IndexController::class)->name('admin.index');
         Route::group(['prefix' => 'fertilizers'], function () {
             Route::get('/trash', \App\Http\Controllers\Admin\Fertilizers\TrashController::class)->name('admin.trash');

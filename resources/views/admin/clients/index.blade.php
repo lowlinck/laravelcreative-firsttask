@@ -93,7 +93,11 @@
             </div><!-- /.container-fluid -->
         </section>
         <!-- /.content -->
+        <div class="mt-3">
+            {{ $clients->withQueryString()->links() }}
+        </div>
     </div>
+
     <!-- /.content-wrapper -->
     @include('admin.layouts.footer')
 

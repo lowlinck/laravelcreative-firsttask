@@ -14,6 +14,7 @@ class Fertilizer extends Model
 {
     use HasFactory;
     use softdeletes;
+    use Filterable;
 
     protected $guarded = false;
 
@@ -21,9 +22,5 @@ class Fertilizer extends Model
         return $this->belongsTo(Culture::class);
     }
 
-    public function getUsersBySearch(Request $request) : Builder
-    {
-        $builder = (new FertilizerSeach())->apply($request);
-        return $builder;
-    }
+
 }

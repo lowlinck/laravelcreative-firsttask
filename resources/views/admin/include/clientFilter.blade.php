@@ -8,20 +8,14 @@
             <div class="modal-body">
                 <form class="form-control " >
                         <label >Параметры поиска</label>
-                        <input type="text" name="ClientsSearch" class="form-control text-center" id="search" placeholder="Введите имя">
-                        <input type="text" name="PriceBefor" class="form-control text-center" placeholder="Введите min  цену">
-                        <input type="text" name="PriceAfter" class="form-control text-center" placeholder="Введите max цену">
-                       {{--              <input type="text" name="DescriptionSearch" class="form-control text-center" id="search" placeholder="Поиск в описании">--}}
-{{--                        <input type="text" name="PurposeSearch" class="form-control text-center" id="search" placeholder="Поиск в назначении">--}}
-{{--                       --}}
-{{--                        <input type="text" name="PhosforBefor" class="form-control text-center" placeholder="Введите min фосфора">--}}
-{{--                        <input type="text" name="PhosforAfter" class="form-control text-center" placeholder="Введите max фосфора">--}}
-{{--                        <input type="text" name="KaliBefor" class="form-control text-center" placeholder="Введите min калия">--}}
-{{--                        <input type="text" name="KaliAfter" class="form-control text-center" placeholder="Введите max калия">--}}
-{{--                        <input type="text" name="PriceBefor" class="form-control text-center" placeholder="Введите min цену">--}}
-{{--                        <input type="text" name="PriceAfter" class="form-control text-center" placeholder="Введите max цену">--}}
-                    <select class="form-select" name="Region[]" multiple aria-label="multiple select example">
-                        <option selected>Выберите регион</option>
+                        <input type="text" name="name" class="form-control text-center" placeholder="Введите имя">
+                        <input type="date" name="datastart" class="form-control text-center" placeholder="Введите начальную  дату">
+                        <input type="date" name="dataend" class="form-control text-center" placeholder="Введите конечную  дату">
+                        <input type="text" name="Pricebefor" class="form-control text-center" placeholder="Введите min цену">
+                        <input type="text" name="Priceafter" class="form-control text-center" placeholder="Введите max цену">
+
+                    <select class="form-select" name="region[]" multiple aria-label="multiple select example">
+                        <option>Выберите регион</option>
                         @foreach($clients as $client)
                             <option value="{{$client->id}}">{{$client->region}}</option>
                         @endforeach

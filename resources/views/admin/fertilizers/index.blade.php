@@ -114,7 +114,7 @@
                     </div>
 
                     </div>
-
+                {{ $fertilizers->withQueryString()->links() }}
             </div><!-- /.container-fluid -->
         </section>
         <!-- /.content -->
